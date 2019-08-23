@@ -23,6 +23,14 @@ spec:
           env:
           - name: NODE_ENV
             value: {{ .Release.Namespace }}
+          - name: SYNAPSE_SERVER
+            value: scitest.esss.lu.se/synapse
+          - name: SYNAPSE_PORT
+            value: 8448
+          - name: SYNAPSE_BOT_NAME
+            value: redacted
+          - name: SYNAPSE_BOT_PASSWORD
+            value: redacted
           ports:
             - containerPort: {{ .Values.service.internalPort }}
           livenessProbe:
