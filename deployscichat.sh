@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 git pull
 helm del --purge scichat
+helm del --purge synapse
 
 if [ "$(hostname)" == "scicat01.esss.lu.se" ]; then
     INGRESS_NAME="-f ./scichat/lund.yaml"
