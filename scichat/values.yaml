@@ -10,7 +10,7 @@ service:
   name: scichat
   type: NodePort
   externalPort: 80
-  internalPort: 3000
+  internalPort: 3030
 ingress:
   enabled: true
   # Used to create an Ingress record.
