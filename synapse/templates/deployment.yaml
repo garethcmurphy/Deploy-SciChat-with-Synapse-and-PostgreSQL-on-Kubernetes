@@ -37,11 +37,23 @@ spec:
 {{ toYaml .Values.resources | indent 12 }}
           volumeMounts: 
             - name: config-volume
-              mountPath: /data/homeserver.yaml
+              mountPath: /conf/homeserver.yaml
               subPath: homeserver.yaml
             - name: config-volume
-              mountPath: /usr/src/app/src/providers/scicat-provider/dao/mongo-dao.ts
-              subPath: mongo-dao.ts
+              mountPath: /data/synapse.macaroon.key
+              subPath: synapse.macaroon.key
+            - name: config-volume
+              mountPath: /data/synapse.registration.key
+              subPath: synapse.registration.key
+            - name: config-volume
+              mountPath: /data/synapse.tls.crt
+              subPath: synapse.tls.crt
+            - name: config-volume
+              mountPath: /data/synapse.tls.key
+              subPath: synapse.tls.key
+            - name: config-volume
+              mountPath: /data/synapse.signing.key
+              subPath: synapse.signing.key
       volumes:
         - name: config-volume
           configMap:
