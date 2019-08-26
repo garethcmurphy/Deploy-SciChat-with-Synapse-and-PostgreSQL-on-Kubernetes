@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 if [[ -z "${POSTGRES_PASSWORD}" ]]; then
-  MY_POSTGRES="jvkldfgvnjfgskvgsfnj"
+    MY_POSTGRES="synapse"
 else
-  MY_POSTGRES="${POSTGRES_PASSWORD}"
+    MY_POSTGRES="${POSTGRES_PASSWORD}"
 fi
 echo "mypostgres" ${MY_POSTGRES}
 git pull
