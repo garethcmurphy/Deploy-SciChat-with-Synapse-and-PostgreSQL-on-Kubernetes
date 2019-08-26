@@ -10,6 +10,6 @@ if [ "$(hostname)" == "scicat01.esss.lu.se" ]; then
     INGRESS_NAME="-f ./scichat/dmscprod.yaml"
 fi
 
-helm install stable/postgresql  --namespace dev --name local-postgresql  -f postgres/values.yaml
+helm install stable/postgresql  --namespace dev --name local-postgresql postgresqlPassword=${POSTGRES_PASSWORD},postgresqlDatabase=my-database   -f postgres/values.yaml
 #helm install scichat --name scichat --namespace dev ${INGRESS_NAME}
 helm install synapse --name synapse --namespace dev ${INGRESS_NAME}
