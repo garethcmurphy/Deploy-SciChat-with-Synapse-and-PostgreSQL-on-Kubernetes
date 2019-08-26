@@ -47,6 +47,8 @@ spec:
               port: {{ .Values.service.internalPort }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
+          securityContext:
+            fsGroup: 991
           volumeMounts: 
             - name: config-volume
               mountPath: /data/homeserver.yaml
