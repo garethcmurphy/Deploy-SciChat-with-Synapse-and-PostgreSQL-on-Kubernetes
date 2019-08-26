@@ -3,8 +3,8 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: docker.io/matrixdotorg/synapse:v0.99.5.1
-  tag: latest
+  repository: docker.io/matrixdotorg/synapse
+  tag: v0.99.5.1
   pullPolicy: Always
 service:
   name: synapse
