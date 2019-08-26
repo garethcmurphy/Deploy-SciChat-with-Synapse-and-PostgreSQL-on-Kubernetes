@@ -4,6 +4,7 @@ if [[ -z "${POSTGRES_PASSWORD}" ]]; then
 else
   MY_POSTGRES="${POSTGRES_PASSWORD}"
 fi
+echo "mypostgres" ${MY_POSTGRES}
 git pull
 #helm del --purge scichat
 helm del --purge synapse
