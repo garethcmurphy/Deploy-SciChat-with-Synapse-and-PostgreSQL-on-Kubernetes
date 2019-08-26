@@ -23,6 +23,18 @@ spec:
           env:
           - name: NODE_ENV
             value: {{ .Release.Namespace }}
+          - SYNAPSE_SERVER_NAME 
+            value: "synapse"
+          - SYNAPSE_REPORT_STATS
+            value: "no"
+          - SYNAPSE_ENABLE_REGISTRATION
+            value: "yes"
+          - SYNAPSE_LOG_LEVEL
+            value: "DEBUG"
+          - SYNAPSE_CACHE_FACTOR
+            value: "10"
+          - POSTGRES_PASSWORD
+            value: "changeme"
           ports:
             - containerPort: {{ .Values.service.internalPort }}
           livenessProbe:
