@@ -37,7 +37,7 @@ spec:
 {{ toYaml .Values.resources | indent 12 }}
           volumeMounts: 
             - name: config-volume
-              mountPath: /conf/homeserver.yaml
+              mountPath: /data/homeserver.yaml
               subPath: homeserver.yaml
             - name: config-volume
               mountPath: /data/synapse.macaroon.key
