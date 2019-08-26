@@ -35,6 +35,10 @@ spec:
             value: "10"
           - name: POSTGRES_PASSWORD
             value: "changeme"
+          - name: UID
+            value: "0"
+          - name: GID
+            value: "0"
           ports:
             - containerPort: {{ .Values.service.internalPort }}
           livenessProbe:
@@ -47,9 +51,6 @@ spec:
               port: {{ .Values.service.internalPort }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
-          securityContext:
-            runAsGroup: 991
-            fsGroup: 991
           volumeMounts: 
             - name: config-volume
               mountPath: /data/homeserver.yaml
