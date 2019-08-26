@@ -11,6 +11,13 @@ service:
   type: NodePort
   externalPort: 80
   internalPort: 8448
+env:
+  SYNAPSE_SERVER_NAME: "synapse"
+  SYNAPSE_REPORT_STATS: "no"
+  SYNAPSE_ENABLE_REGISTRATION: "yes"
+  SYNAPSE_LOG_LEVEL: "DEBUG"
+  SYNAPSE_CACHE_FACTOR: "10"
+  POSTGRES_PASSWORD: "changeme"
 ingress:
   enabled: true
   # Used to create an Ingress record.
