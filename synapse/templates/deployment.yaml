@@ -48,7 +48,6 @@ spec:
           resources:
 {{ toYaml .Values.resources | indent 12 }}
           securityContext:
-            runAsUser: 991
             runAsGroup: 991
             fsGroup: 991
           volumeMounts: 
