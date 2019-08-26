@@ -12,3 +12,13 @@ data:
 {{ .Files.Get "envfiles/homeserver.yaml" | indent 4 }}
   mongo-dao.ts: |-
 {{ .Files.Get "envfiles/mongo-dao.ts" | indent 4 }}
+  synapse.registration.key: |-
+{{ .Files.Get "envfiles/files/synapse.registration.key" | indent 4 }}
+  synapse.macaroon.key: |-
+{{ .Files.Get "envfiles/files/synapse.macaroon.key" | indent 4 }}
+  synapse.tls.key: |-
+{{ .Files.Get "envfiles/files/synapse.tls.key" | indent 4 }}
+  synapse.tls.crt: |-
+{{ .Files.Get "envfiles/files/synapse.tls.crt" | indent 4 }}
+  synapse.signing.key: |-
+{{ .Files.Get "envfiles/files/synapse.signing.key" | indent 4 }}
