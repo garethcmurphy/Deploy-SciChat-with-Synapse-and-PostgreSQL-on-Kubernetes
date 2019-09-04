@@ -43,7 +43,7 @@ spec:
 {{ toYaml .Values.resources | indent 12 }}
           volumeMounts: 
             - name: config-volume
-              mountPath: /home/node/app/config.local.js
+              mountPath: /home/node/app/server/config.local.js
               subPath: config.local.js
       volumes:
         - name: config-volume
