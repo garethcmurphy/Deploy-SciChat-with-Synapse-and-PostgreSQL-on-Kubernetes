@@ -42,11 +42,11 @@ spec:
           resources:
 {{ toYaml .Values.resources | indent 12 }}
           volumeMounts: 
-            - name: config-volume
+            - name: scichat-volume
               mountPath: /home/node/app/server/config.local.js
               subPath: config.local.js
       volumes:
-        - name: config-volume
+        - name: scichat-volume
           configMap:
             name: {{ template "fullname" . }}
     {{- if .Values.nodeSelector }}
