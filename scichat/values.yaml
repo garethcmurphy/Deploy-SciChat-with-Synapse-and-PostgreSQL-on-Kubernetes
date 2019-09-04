@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: henrikjohansson712/scichat-loopback
+  repository: dacat/scichat-loopback
   tag: latest
   pullPolicy: Always
 service:
