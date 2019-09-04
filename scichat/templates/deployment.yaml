@@ -26,9 +26,9 @@ spec:
           - name: SYNAPSE_SERVER
             value: "scitest.esss.lu.se"
           - name: SYNAPSE_BOT_NAME
-            value: "redacted"
+            value: "scicatbot"
           - name: SYNAPSE_BOT_PASSWORD
-            value: "redacted"
+            value: "scicatbot"
           ports:
             - containerPort: {{ .Values.service.internalPort }}
           livenessProbe:
