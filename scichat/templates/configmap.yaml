@@ -8,5 +8,5 @@ metadata:
     chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     app: {{ template "name" . }}
 data:
-  configuration.ts: |-
+  config.local.ts: |-
 {{ .Files.Get "envfiles/config.local.js" | indent 4 }}

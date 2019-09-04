@@ -43,6 +43,9 @@ spec:
 {{ toYaml .Values.resources | indent 12 }}
           volumeMounts: 
             - name: scichat-volume
+              mountPath: /home/node/app/config.local.js
+              subPath: config.local.js
+            - name: scichat-volume
               mountPath: /home/node/app/server/config.local.js
               subPath: config.local.js
       volumes:
