@@ -10,3 +10,5 @@ metadata:
 data:
   config.local.ts: |-
 {{ .Files.Get "envfiles/config.local.js" | indent 4 }}
+  config.test.ts: |-
+{{ .Files.Get "envfiles/config.test.js" | indent 4 }}
