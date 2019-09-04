@@ -46,7 +46,7 @@ spec:
               mountPath: /home/node/app/config.test.js
               subPath: config.test.js
             - name: scichat-volume
-              mountPath: /home/node/app/server/config.local.js
+              mountPath: /home/node/app/config.local.js
               subPath: config.local.js
       volumes:
         - name: scichat-volume
